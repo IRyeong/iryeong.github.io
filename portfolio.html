@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>박이령을 소개합니다.</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8cb2c2c1-dd1e-4187-9eb6-0d8d6ddea55d" class="page sans"><header><h1 class="page-title">박이령을 소개합니다.</h1></header><div class="page-body"><p id="b1654316-d322-421b-9539-e545ce46a061" class="">
+</p><div id="4688f8c6-79ef-4ce1-a8d6-3628ee344b40" class="column-list"><div id="ab4366a3-fdfd-461f-8d61-0a03b5cb3c30" style="width:43.75%" class="column"><figure id="cb26e400-f0c0-447b-86f8-f9df1de2ab8f" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2587%25E1%2585%25A1%25E1%2586%25A8%25E1%2584%258B%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A7%25E1%2586%25BC_%25E1%2584%258C%25E1%2585%25B3%25E1%2586%25BC%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25A1%25E1%2584%258C%25E1%2585%25B5%25E1%2586%25AB_%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2589%25E1%2585%25A1%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AB_Small.jpeg"><img style="width:244px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2587%25E1%2585%25A1%25E1%2586%25A8%25E1%2584%258B%25E1%2585%25B5%25E1%2584%2585%25E1%2585%25A7%25E1%2586%25BC_%25E1%2584%258C%25E1%2585%25B3%25E1%2586%25BC%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25A1%25E1%2584%258C%25E1%2585%25B5%25E1%2586%25AB_%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25A8%25E1%2584%2589%25E1%2585%25A1%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AB_Small.jpeg"/></a></figure><p id="b5017e89-cc0f-4b50-b35a-f2337279db82" class="">
+</p></div><div id="6e31a25e-bb56-438a-b042-5fe8edb3009b" style="width:56.25%" class="column"><p id="81849197-5f53-4bfe-b4ef-04db0f62cb76" class="">
+</p><h2 id="56b8aa54-6cbe-4ba2-8f44-180727a80fb0" class=""> 👩‍🌾 Back-End Developer</h2><p id="f3c10589-c396-4fd3-bf35-b3eb444d404e" class="">
+</p><h3 id="d7b6c40b-2a72-4166-a3a4-2b0224bd7213" class="">안녕하세요, </h3><h3 id="76ae8d87-bcda-492a-9b6c-117e4d25d5cd" class=""><mark class="highlight-yellow_background"><span style="border-bottom:0.05em solid">함께 일하고 싶은 개발자</span></mark>로 거듭나고 싶은</h3><h3 id="fc504c11-8892-48ef-ab18-c9b19de82be3" class="">박이령입니다.</h3><p id="1681bdf6-7737-4712-bd24-963f64241d29" class="">
+</p></div></div><h3 id="8bfad4be-1123-485b-97a8-1462d0eb644a" class="">                                     😊 맡은 일에 책임을 다합니다.</h3><h3 id="2129dd8b-b686-4872-b447-0a9aa5fc9162" class="">                    🧩 모르는 것이 나오면 알아가면 된다고 생각합니다. </h3><p id="ba241a62-4c4f-4fce-816e-cf9967a96856" class="">
+</p><h2 id="08def4a9-3b63-4d59-affb-b06bd03e851e" class="">🐾 Stacks</h2><hr id="9220c1f9-2325-443a-a5a2-3c4832a07cf6"/><div id="505a623b-7c95-457e-9f15-1bf48338dcef" class="column-list"><div id="50480340-af13-40ee-818a-5b7b286043d5" style="width:50%" class="column"><h3 id="50cd6d3a-ea50-4458-b072-460c9b145113" class="">  Front-End</h3><p id="a91ea496-a894-4635-8f30-687d658dd38c" class="">
+</p></div><div id="a2500c3d-a4fa-4402-b70a-0515da69981c" style="width:50%" class="column"><p id="de0e86c1-c80d-4bae-b76c-eff3a6889244" class="">Flutter</p><p id="41d15c26-78f4-4987-ba16-faa9b3db4b87" class="">HTML, JS, CSS</p></div></div><div id="a4be24e5-35d3-40a5-b08f-c28eb2e242a0" class="column-list"><div id="844c8617-c7f3-465d-89b9-2b62d72ddeeb" style="width:50%" class="column"><h3 id="ae2b1630-35ef-4f65-8858-3621102dde3c" class="">  Back-End</h3><p id="43e572d6-a461-4c91-9653-44dd68010b8a" class="">
+</p></div><div id="8fc6eaec-31cc-4fe0-a7f8-9d85af739942" style="width:50%" class="column"><p id="c36554bc-e061-489a-8f9d-ba2f7969e828" class="">Spring Boot Framework</p><p id="1ed91aee-d683-4a66-9829-f76ff939fdd8" class="">RDBMS (MariaDB, MySQL)</p><p id="527a1343-46d7-4897-9585-968efaa90c26" class="">NoSQL (Redis, MongoDB)</p><p id="0e971943-f12c-4847-a686-98d76d963351" class="">JPA, MyBatis</p></div></div><div id="edef21d0-c334-443e-9291-cf96b39e2014" class="column-list"><div id="3c18dc4a-74bc-453f-8446-0d8b974f5977" style="width:50%" class="column"><h3 id="e4781ef4-ea6a-4e85-baea-c0431b0ed816" class="">Collaboration</h3><h3 id="4a0182a0-a997-4795-8ac9-d715210595f6" class="">          &amp;</h3><h3 id="a6f24822-55c8-4d1b-8ce9-d6b888bdf94f" class="">       Tools</h3><p id="53a6a69a-0eff-4e25-aadb-2046b248ea40" class="">
+</p></div><div id="49b53d96-852b-4536-b16a-c2bc2d86c2ea" style="width:50%" class="column"><p id="e1f35dfe-ff49-4db7-8e00-8bff23f23dc1" class="">IntelliJ, VS Code</p><p id="6115f5d0-ff3e-454b-91be-623679734329" class="">Git</p><p id="94df9f18-b36b-4b76-83a7-37b443960342" class="">Jira</p><p id="171c5554-9643-4107-8ce9-1511ea2aac07" class="">Figma</p><p id="e83fd97b-502e-42e9-aa5e-60fe1f6a4600" class="">Mattermost, Teams, slack</p></div></div><div id="dfca8f09-60e5-4bb6-88bb-78d6a0203795" class="column-list"><div id="e16df77d-bed5-4f04-a926-44b050f97e0a" style="width:50%" class="column"><h3 id="0849e39f-9938-4257-8567-746f89dd65ac" class="">  Languages</h3></div><div id="fc52aee3-4130-49df-9e35-e87c6cd39877" style="width:50%" class="column"><p id="f7989d78-ff5a-4f9a-b948-2326eb61945c" class="">Java</p><p id="9dcc7a1d-d42f-45aa-9387-a73348b9be13" class="">C++</p><p id="b8d7ed42-0de0-4ffa-9227-11f20ab3d30d" class="">Python</p><p id="6174b368-cef3-43a2-b5e8-36635514003f" class="">Solidity</p></div></div><p id="efbf015b-cfdc-480d-9e63-48b16a8f0891" class="">
+</p><h2 id="1eb6777b-e2aa-4157-b01e-5eb2e099f980" class="">🌺 Profile</h2><hr id="65eacbee-5ade-4d6d-83f3-a9e87562928d"/><ul id="ad233e8b-8a06-47bd-8479-9d91b9eb7a55" class="bulleted-list"><li style="list-style-type:disc">투디지트 인턴 : 2021.06 - 2021.11</li></ul><ul id="691130ab-7de2-421f-b9d9-81006ae99cb5" class="bulleted-list"><li style="list-style-type:disc">삼성 청년 SW 아카데미 8기 : 2022.07 - 현재</li></ul><p id="eea49c5e-d421-4526-82f0-e659567d1a7a" class="">
+</p><h2 id="def76835-70a5-4c1a-aa03-b09b4f89c7e0" class="">🌷 Contact</h2><hr id="3b1fc00d-b5c7-447b-9f5f-63155a7bda78"/><p id="023a537b-6148-4f89-b876-a50e73265bba" class="">📨  dasliebeich7@gmail.com</p><p id="ca449f0f-8118-4664-bcde-d082a8dd11b5" class="">📱  010-3528-1948</p><p id="bcc914b2-7213-4def-87d1-95e299cf2528" class="">
+</p><h2 id="cde634c4-3d5c-49cb-ad9e-efc0c9faa660" class="">🌻 Experience</h2><hr id="236a280c-8c07-485a-9a26-17ac3f20dc14"/><h3 id="90b93df0-6abe-4510-a01d-df86722f16a5" class="block-color-orange_background">[경험 1 : FOCUS - B2B 면접 특화 화상 플랫폼 웹 프로젝트 개발]</h3><figure id="6d899b31-43da-4c1d-8531-daeb35aabe6a" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25EC%2599%2584%25EC%2584%25B1_(1).png"><img style="width:576px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25EC%2599%2584%25EC%2584%25B1_(1).png"/></a></figure><p id="f57f6cd2-ea9c-459e-b7e5-e402f96b1bcd" class="">erd cloud : <a href="https://www.erdcloud.com/d/msP6SZ4giS9ZQLT4F">https://www.erdcloud.com/d/msP6SZ4giS9ZQLT4F</a></p><ol type="1" id="04a2933c-31a8-476b-85ae-3649ea8d986f" class="numbered-list" start="1"><li>개발 기간 : 2023.1 - 2023.2 (총 7주)</li></ol><ol type="1" id="0a6e9851-8ba9-4b1c-8be6-a606a6820d36" class="numbered-list" start="2"><li>개발 인원 : 6명</li></ol><ol type="1" id="5ac89b15-b6e3-481e-aa2a-412c5412249a" class="numbered-list" start="3"><li>개발 환경<ul id="2c166403-4394-4caf-b02e-92ba188bf141" class="bulleted-list"><li style="list-style-type:disc">Spring Boot 프레임워크에서 Java8로 구현</li></ul><ul id="13711142-1e58-4c98-af65-038d27488bd0" class="bulleted-list"><li style="list-style-type:disc">MySQL, Redis, JPA 사용</li></ul></li></ol><ol type="1" id="ed1b9b42-b160-49f1-a1db-e1ec17b2252c" class="numbered-list" start="4"><li>프로젝트 개요<p id="273da0f8-4bb0-4218-8593-e8c58feaf882" class="">기업 관리자가 면접관과 지원자들을 등록하여 계정을 생성할 수 있으며, 전형 등록, 면접 일정 등록, 평가지 등록, 면접관과 지원자 배치 등의 전체적인 면접 프로세스를 진행할 수 있습니다.</p></li></ol><ol type="1" id="6aa104fe-70ba-4305-badb-a85a17d9ddec" class="numbered-list" start="5"><li>맡은 역할<ul id="339efdeb-73e9-459d-ba84-ff1096f61005" class="bulleted-list"><li style="list-style-type:disc">기획 후 기능 명세서와 ERD를 함께 설계</li></ul><ul id="b94e37fb-d371-40f0-ac00-ac0d85d18caf" class="bulleted-list"><li style="list-style-type:disc">Jwt 토큰을 사용한 로그인을 구현하고, Spring Security를 사용하여 인증 구현</li></ul><ul id="90bbbf11-4f7c-45e9-8d55-316ccb44b6f6" class="bulleted-list"><li style="list-style-type:disc">Redis를 사용하여 로그아웃 구현</li></ul><ul id="e52e198c-d4f0-467e-bdb0-387fd5fc876b" class="bulleted-list"><li style="list-style-type:disc">사용자 관련 생성, 조회, 기타 면접 일정과 평가 기능의 CRUD api 구현</li></ul><ul id="290c5a16-0d16-4862-a76e-a1d9d5bd7601" class="bulleted-list"><li style="list-style-type:disc">데이터 입력 에러, 내부 서버 에러 등의 유효성 검사를 통한 에러 처리 구현</li></ul></li></ol><p id="83efd036-63ae-4882-adec-678f250ecc9b" class="">
+</p><h3 id="80b445e4-b742-49fe-99ab-f23469cbed7e" class="block-color-orange_background">[경험 2 : STAY - 블록체인 p2p 서비스 개발] - <strong><mark class="highlight-red">우수상 수상</mark></strong> </h3><figure id="29ad6c24-6d11-4e41-8d80-5239721b9ce6" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.22.07.png"><img style="width:576px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.22.07.png"/></a></figure><div id="5d411e92-bd6d-4b9a-bbe7-54b6fb9956d5" class="column-list"><div id="7917582a-df64-4399-8920-be757a333e1d" style="width:50%" class="column"><figure id="63fa390d-d674-49c4-acec-07ba5e115354" class="image" style="text-align:left"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/B612_(1).png"><img style="width:336px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/B612_(1).png"/></a></figure></div><div id="7996da7d-3382-488d-91d0-aff4a0e5a902" style="width:50%" class="column"><figure id="eeacfa22-107f-48db-a715-53325dc8bd63" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.21.22.png"><img style="width:2042px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-04-25_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.21.22.png"/></a></figure></div></div><ol type="1" id="3efca69e-5e6e-4c97-b466-c11763b1dba3" class="numbered-list" start="1"><li>개발 기간 : 2023.2 - 2023.4 (총 7주)</li></ol><ol type="1" id="9461501c-424d-4772-a2e4-b9e34a2fc27b" class="numbered-list" start="2"><li>개발 인원 : 6명</li></ol><ol type="1" id="90cebc64-14e5-434b-afc6-ea2aecb7149a" class="numbered-list" start="3"><li>개발 환경<ul id="93d3416f-c5f1-4c81-8da9-dfe93c411f3c" class="bulleted-list"><li style="list-style-type:disc">Solidity로 블록체인 구현</li></ul><ul id="bfc956cf-2912-4add-9493-d890005d91e2" class="bulleted-list"><li style="list-style-type:disc">Spring Boot 프레임워크에서 Java8로 구현</li></ul></li></ol><ol type="1" id="28fe9258-d6e9-4f69-9e19-146a95d4ffca" class="numbered-list" start="4"><li>프로젝트 개요<p id="b4e4b0b4-513b-4af1-b829-22856de3e5bc" class="">어린 왕자를 모티브로 하여, 행성과 장미꽃 nft를 민팅, 판매, 구매할 수 있고 광장에서 다른 유저와 소통하며 게시판에서 특정 유저에게 글을 보낼 수 있습니다.</p></li></ol><ol type="1" id="0f8a5160-6781-445e-bcd9-22c2cc2c142d" class="numbered-list" start="5"><li>맡은 역할<ul id="b5bf03e3-b0ce-415a-9baa-0787376149f2" class="bulleted-list"><li style="list-style-type:disc">행성과 꽃 nft 민팅(이름과 종류 랜덤 지정) api 개발</li></ul><ul id="59305913-e5d5-444a-b326-2882885cfffd" class="bulleted-list"><li style="list-style-type:disc">nft 판매, 구매 api 개발</li></ul><ul id="2c91903b-1ffa-42d8-9c9a-4efe03d87d3f" class="bulleted-list"><li style="list-style-type:disc">nft 경매 관련 기능 api 개발</li></ul><ul id="402499b1-9a90-4e38-ae29-662df3c95901" class="bulleted-list"><li style="list-style-type:disc">ERD 설계 및 방명록과 게시판 CRUD api 개발</li></ul></li></ol><p id="b3249c6c-f8c2-4f9f-8ac3-a7cb7b84f98e" class="">
+</p><h3 id="76067ed5-67a2-4ec6-9358-7d58da20f816" class="block-color-orange_background">[경험 3 : Bucket Splash - 버킷 리스트 SNS 개발] - <mark class="highlight-red"><strong>최우수상 수상</strong></mark> </h3><figure id="0a91eb2d-4e62-4c45-b53c-39e45fe315ab" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/bucket-splash-%25EC%25A7%2584%25EC%25A7%259C.png"><img style="width:576px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/bucket-splash-%25EC%25A7%2584%25EC%25A7%259C.png"/></a></figure><ol type="1" id="85bcee6a-5df6-4882-b970-38286e88e898" class="numbered-list" start="1"><li>개발 기간 : 2022.11 - 2022.11 (총 2주)</li></ol><ol type="1" id="aa5d8724-d221-438a-9180-f3d1c4d52029" class="numbered-list" start="2"><li>개발 인원 : 2명</li></ol><ol type="1" id="8661e72b-8baa-4ed5-9b65-63f3ca8f1d5c" class="numbered-list" start="3"><li>개발 환경<ul id="2dd59e47-7a20-405f-b829-8cd8de77c13a" class="bulleted-list"><li style="list-style-type:disc">Spring Boot를 사용하여 Java8로 구현</li></ul><ul id="40c8a99c-45ff-4342-8543-446b38b20203" class="bulleted-list"><li style="list-style-type:disc">MySQL과 MyBatis 사용</li></ul><ul id="51ac590d-ce06-4b67-9bb2-f8f06ffbddd6" class="bulleted-list"><li style="list-style-type:disc">Vue.js 사용</li></ul><ul id="89cb5437-ed23-4789-88a7-e49f08cbe828" class="bulleted-list"><li style="list-style-type:disc">azure에 db 배포</li></ul></li></ol><ol type="1" id="f341f5a7-3b4c-4fbb-a282-4272d3f59593" class="numbered-list" start="4"><li>프로젝트 개요<p id="abe13238-a82a-4f06-9a9c-16b8f6b2996e" class="">사용자의 버킷 리스트를 관리하는 웹 사이트로,</p><p id="628a3ac5-d0fa-45c0-8530-d2c2c615825c" class="">자신이 작성한 버킷 리스트를 다른 사용자들과 공유하며 소통하는 장입니다.</p><p id="2cf0c62d-792e-4244-96cb-0e5505c6e7aa" class="">회원가입과 로그인은 물론, 다른 사용자들을 팔로우할 수 있어 보다 연결된 느낌을 주며,</p><p id="02a50f49-b028-428c-8c42-458f78fe5793" class="">자유 게시판에 버킷 리스트와 관련된 글을 쓰고 다른 사용자가 쓴 글에 좋아요나 댓글로 반응할 수 있습니다.</p><p id="8764ecc5-199a-4fb1-baf6-bcbd31a7a21f" class="">또한 특정 버킷 리스트를 달성하기 위해 여러 사용자를 모집하는 모집 게시판도 이용할 수 있습니다.</p></li></ol><ol type="1" id="9715b894-9a54-4400-be92-0611d1ed904f" class="numbered-list" start="5"><li>맡은 역할<ul id="27a99f5f-4ea6-4966-919b-06910dd67827" class="bulleted-list"><li style="list-style-type:disc">ERD 설계</li></ul><ul id="a056848e-19e0-4c0e-8aad-91d64ce0a8ea" class="bulleted-list"><li style="list-style-type:disc">jwt를 이용한 로그인과 로그아웃과 sha-256을 이용한 비밀번호 암호화</li></ul><ul id="09438b3c-9369-4f2b-9a77-e51655e3fcb0" class="bulleted-list"><li style="list-style-type:disc">버킷리스트, 자유 게시판, 모집 게시판, 팔로우, 좋아요 등 모든 CRUD api 개발
+azure에 db 배포</li></ul></li></ol><p id="886e8e70-7f69-4849-a3ad-fcb4e425d1b1" class="">
+</p><h3 id="65f29a9e-8e05-49c3-86fc-a60f446cecf5" class="block-color-orange_background">[경험 4 : 인공지능 핀테크 스타트업에서 Linux 환경에서의 개발]</h3><ol type="1" id="75792c3e-a4e0-4da8-99d9-3b57ea03d90c" class="numbered-list" start="1"><li>업무 기간 : 2021.6 - 2021.11 (약 5개월)</li></ol><ol type="1" id="4d9fb9db-f95b-4f84-b0e1-39e3da36c17f" class="numbered-list" start="2"><li>개발 환경<ul id="671fceb8-a8ec-49cc-ad80-fe3115e0e230" class="bulleted-list"><li style="list-style-type:disc">리눅스 서버에서 python으로 작업</li></ul><ul id="44581b29-197b-4761-8975-ae9165cfd4a2" class="bulleted-list"><li style="list-style-type:disc">Git, Teams를 사용하여 협업</li></ul></li></ol><ol type="1" id="e6709164-3c5e-4f19-b9f2-622093b01389" class="numbered-list" start="3"><li>맡은 역할<ul id="280285cd-ab3e-46d3-9962-ffa5f30ebffc" class="bulleted-list"><li style="list-style-type:disc">주식 종목 예측 엔진의 유지 보수와 배포</li></ul><ul id="be204a07-0e76-4a47-9c9c-1667baed6518" class="bulleted-list"><li style="list-style-type:disc">(주식 종목 예측 엔진은 딥러닝 모델을 사용하여 특정 기사가 어느 주식 종목에 관한 것인지 추출하는 엔진입니다.)</li></ul><ul id="dbd50bb1-39eb-4a6d-a348-c916a825388b" class="bulleted-list"><li style="list-style-type:disc">매일 주식 종목 기사들에 대한 엔진 예측 결과를 직접 작성한 파이썬 코드로 돌려 csv 파일로 받아 데이터 QA</li></ul><ul id="2cc0627c-e4c1-43fd-b34d-32083da028dd" class="bulleted-list"><li style="list-style-type:disc">딥러닝 엔진의 전처리와 후처리 부분의 알고리즘 고도화</li></ul><ul id="782f7247-2bf9-48e2-b7be-aaf7d88e9035" class="bulleted-list"><li style="list-style-type:disc">매주 엔진의 성능이 얼마나 향상되었는지 파악하고, 릴리즈 노트를 작성하여 NAS 서버에 배포</li></ul></li></ol><p id="ca6c3d43-1ff2-4ec1-8099-36d6f366fac4" class="">
+</p><h3 id="21a7f194-4d99-41ab-826d-8dd679cbae74" class="block-color-orange_background">[경험 5 : 꼬북이네 - ChatGPT를 이용한 조언 주기 프로젝트 개발]</h3><figure id="782a5d0a-337a-48fc-9c52-2ab3d7a241e0" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/KakaoTalk_Photo_2023-04-25-22-23-53.png"><img style="width:3830px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/KakaoTalk_Photo_2023-04-25-22-23-53.png"/></a></figure><ol type="1" id="76c3d71f-496f-4ff2-b5ea-9547c6a421e1" class="numbered-list" start="1"><li>개발 기간 : 2023.3 (총 2일)</li></ol><ol type="1" id="73bace67-9ea7-46c0-97b0-d40f3b969a7b" class="numbered-list" start="2"><li>개발 인원 : 2명</li></ol><ol type="1" id="7161ba0c-2e53-4f12-9ca1-3aeb16286637" class="numbered-list" start="3"><li>개발 환경<ul id="22011a5a-2c12-47a6-9f86-b2b847312705" class="bulleted-list"><li style="list-style-type:disc">Flask를 사용하여 웹 서버 구축</li></ul><ul id="d2872cbe-bf15-4db1-ac88-dab75816c06e" class="bulleted-list"><li style="list-style-type:disc">Open AI의 API 사용</li></ul></li></ol><ol type="1" id="49fe9311-70ae-4764-9fe2-d053e606edfc" class="numbered-list" start="4"><li>프로젝트 개요<ul id="c20a5e2a-9cb5-4201-a7be-81c6ec9275b2" class="bulleted-list"><li style="list-style-type:disc">사용자의 현재 상태와 생일, 그리고 mbti를 선택하면 꼬북이가 조언을 들려주는 서비스입니다.</li></ul></li></ol><ol type="1" id="eb883bda-11e5-4017-ba86-9f0e4be01218" class="numbered-list" start="5"><li>맡은 역할<ul id="68646637-6a47-4b1b-9f72-a38383aa4ab6" class="bulleted-list"><li style="list-style-type:disc">사용자가 선택한 단어들을 조합하여 Open AI의 API로 질문을 보내 답변을 받아옴</li></ul><ul id="b60a0b06-2c18-4946-a502-7d0913d29569" class="bulleted-list"><li style="list-style-type:disc">백엔드 배포</li></ul></li></ol><p id="7fe9f23b-93fd-4c20-a19d-17b703c02e32" class="">
+</p><h3 id="2fca4c82-2f1a-4153-a717-da8bf80d2e3c" class="block-color-orange_background">[경험 6 : 훈맹정음 - Android Java를 이용한 점자 인식 어플 개발]</h3><div id="c6023d92-6a00-4881-920d-c19c6d89378c" class="column-list"><div id="a6cb56ec-c7a1-4892-8411-675f7562dda6" style="width:62.5%" class="column"><figure id="4e769fa1-4e13-4d6e-ae84-afa354a00f2b" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/Untitled.png"><img style="width:480px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/Untitled.png"/></a></figure></div><div id="ad0ea0b0-7491-45fe-9526-99358cb1be49" style="width:37.50000000000001%" class="column"><figure id="bd01565e-5232-47d4-8a4e-3887b39775ee" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/Untitled%201.png"><img style="width:902px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%85%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%E1%84%92%E1%85%A1%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%208cb2c2c1dd1e41879eb60d8d6ddea55d/Untitled%201.png"/></a></figure></div></div><ol type="1" id="1f5d9013-b95b-4442-aa8b-f61445a5a14d" class="numbered-list" start="1"><li>개발 기간 : 2021.3 - 2021.6 (총 4개월)</li></ol><ol type="1" id="93e999bd-7f1e-4fdd-a5e4-a1a9b8a0c548" class="numbered-list" start="2"><li>개발 인원 : 3명</li></ol><ol type="1" id="1c7970c1-7c7c-47c6-922d-e099d9d86a69" class="numbered-list" start="3"><li>개발 환경<ul id="bf2fb454-4217-4537-8cb4-7c6e7e4d99cb" class="bulleted-list"><li style="list-style-type:disc">Android Studio를 사용하여 Java로 구현</li></ul><ul id="2b1d66f8-79fc-406d-9596-e7a7ae377616" class="bulleted-list"><li style="list-style-type:disc">opencv는 C++로 구현</li></ul></li></ol><ol type="1" id="bc6bb191-0ca6-4fba-b458-88cde8828a66" class="numbered-list" start="4"><li>프로젝트 개요<p id="aa4b5393-c740-4e05-b927-87158d8e88df" class="">핸드폰으로 어플을 켜면 카메라가 나오고, 점자를 손가락으로 가리킨 뒤, 카메라를 비추면 점자가 무엇인지 읽어주는 서비스입니다.</p></li></ol><ol type="1" id="b97caf4f-b126-4026-88d3-49f45d8d5be8" class="numbered-list" start="5"><li>맡은 역할<ul id="aa9b45d8-d606-4f68-b639-ebcbddc2b2e0" class="bulleted-list"><li style="list-style-type:disc">OpenCV 라이브러리를 사용하여 전처리 작업 구현</li></ul><ul id="360f88a0-a016-4eae-b11f-cafa9f1f3ab0" class="bulleted-list"><li style="list-style-type:disc">팀원이 만들어준 딥러닝 모델을 프로젝트 내에서 실행시켜 실시간 카메라 사진을 입력으로 주고, 인식된 점자를 출력</li></ul><ul id="07b8f165-334a-4aad-a98c-ef26eb53c883" class="bulleted-list"><li style="list-style-type:disc">구글 음성 인식 api를 사용하여 점자를 읽어주도록 구현</li></ul></li></ol><p id="8f2a1ded-4b61-42d3-85ed-b99f2d61b859" class="">
+</p><h2 id="1574e083-4201-4580-a869-23177c7a43d5" class="">💐 Record</h2><hr id="e0b134c2-6ca7-4104-a266-be91c6fe7b1f"/><ul id="ba1b4d81-2ee0-4850-86aa-f36dce737e87" class="bulleted-list"><li style="list-style-type:disc">기술 블로그 : https://velog.io/@1ong1ong</li></ul><ul id="d03f8428-33fd-4d85-85e3-617cf2451909" class="bulleted-list"><li style="list-style-type:disc">github : https://github.com/IRyeong</li></ul><p id="b72ef8ed-6d97-4e72-a999-4848e5d25d43" class="">
+</p><h2 id="c143caae-29f1-42de-a930-c17520ce61c4" class="">🌸 Certificate</h2><hr id="5d6586a0-8ba7-4599-a765-e86d9e2ca27d"/><ul id="4b491f0f-97bc-446d-81f4-a6c36a3fe1af" class="bulleted-list"><li style="list-style-type:disc"><strong>TOEIC/910</strong>/2021.12.19 by ybm한국TOEIC위원회(013222-0416005101, 수험 번호 162213)</li></ul><ul id="d4c30d67-f943-4e2d-bd42-5ffc11706079" class="bulleted-list"><li style="list-style-type:disc"><strong>OPIc/AL</strong>/2022.12.24 by ACTFL(2B7054637297)</li></ul></div></article></body></html>
